@@ -14,7 +14,7 @@ npm `latest` 解析出精确稳定版本 → 校验该 manifest 声明了合法�
 
 ## 1. 发布到 npm
 
-包名 `dsh-material-theme`（2026-10-21 查过，npm 上仍未被占用）。
+包名 `dsh-material-theme` — **已于 2026-10-21 发布**（`latest` = 0.2.4，maintainer `alex3567`）。
 
 ```sh
 cd /Users/qucaixian/dsh-material
@@ -27,8 +27,29 @@ npm publish --access public
 
 ```sh
 curl -s https://registry.npmjs.org/dsh-material-theme/latest | head -c 400
-# 应返回 name/version=0.2.3，且 dsh.bundle.patch = "./cordis.patch.yml"
+# 应返回 name/version=0.2.4，且 dsh.bundle.patch = "./cordis.patch.yml"
+curl -s https://registry.npmjs.org/-/package/dsh-material-theme/dist-tags
 ```
+
+### 实战踩过的两个坑（2026-10-21）
+
+1. **token 类型决定发布是「直接」还是「staging」**
+   - 账号开了 2FA 时，classic token 直接发会报 `E403 需要 2FA`；
+   - granular（`npm_…`）token 如果是「bypass 2FA」类型，registry 会把发布送进
+     **staged publishing**：返回 `202`、自动创建占位版本 `0.0.0-stage`，
+     真实版本异步落地，但 `latest` 仍指向占位版本 —— 需要手动修 dist-tag（见下）。
+   - 想一步到位：用 **Classic → Automation** token，或走 GitHub Actions 的
+     trusted publishing（OIDC，无 token）。
+2. **发布后手动校正 dist-tag**（staged 路径必需，npm ≥ 12 才有 `npm stage` 子命令）
+
+   ```sh
+   npm dist-tag add dsh-material-theme@0.2.4 latest
+   curl -s https://registry.npmjs.org/-/package/dsh-material-theme/dist-tags   # {"latest":"0.2.4"}
+   ```
+
+   `0.0.0-stage` 这个占位版本用 bypass 2FA 的 granular token 删不掉
+   （`E403 … may not perform this action`），要清掉得在 npmjs.com 网页上带 2FA 操作；
+   留着无副作用，只是 `npm view` 的版本列表里多一行。
 
 npm 包内容由 `package.json` 的 `files` 决定（`index.js`、`client/`、`cordis.patch.yml`、
 `README.md`、`LICENSE`），`npm pack --dry-run` 可预览：6 个文件、约 27 kB。

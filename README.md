@@ -144,7 +144,7 @@ DSH 的「外观」三宫格写死为 light / dark / system，第三方主题无
 dsh plugin --profile desktop add github:jaychoumylove/dsh-material
 ```
 
-**从 npm 安装**（包里已发布到 npm 之后）：
+**从 npm 安装**（已发布，`latest` = 0.2.4）：
 
 ```sh
 dsh plugin --profile desktop add dsh-material-theme@latest
@@ -195,6 +195,7 @@ OK — 144 distinct tokens, 32 themes × 34 accents
 
 ## 变更
 
+- **0.2.4**：发布到 npm（`dsh-material-theme`），市场条目可直接用 npm 安装。
 - **0.2.3**：所有调色板名称统一为 3–4 个中文字（设置行与会话顶部下拉共用），
   下拉浮层收窄到 168px、行距与色块同步紧凑。
 - **0.2.2**：主题列表按 `Material themes / Other themes` 分类，每类内部再分浅色 / 深色，

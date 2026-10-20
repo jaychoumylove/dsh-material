@@ -1,6 +1,6 @@
 {
   "name": "dsh-material-theme",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "type": "module",
   "description": "Material Theme for DSH Desktop — the official Material Theme palette set (32 palettes: Oceanic, Palenight, Darker, Deep Ocean and 28 more) with the official accent table and syntax colours",
   "main": "index.js",
