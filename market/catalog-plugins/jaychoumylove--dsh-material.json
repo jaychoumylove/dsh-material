@@ -1,0 +1,12 @@
+{
+  "$schema": "../schema/plugin.schema.json",
+  "id": "jaychoumylove/dsh-material",
+  "name": "dsh-material",
+  "repository": "https://github.com/jaychoumylove/dsh-material",
+  "category": "theme",
+  "description": {
+    "en": "Material Theme for DSH Desktop: the official Material Theme palettes (32 schemes, 34 accent colours) and their syntax highlighting colours mapped onto the client theme tokens, with a settings row and a header switcher.",
+    "zh": "DSH Desktop 的 Material Theme 主题插件：把官方 Material Theme 的 32 套调色板、34 个强调色与语法高亮色映射到客户端主题令牌，并提供设置行与会话顶部切换菜单。"
+  },
+  "added": "2026-10-21"
+}

@@ -134,6 +134,16 @@ DSH 的「外观」三宫格写死为 light / dark / system，第三方主题无
 
 ## 安装
 
+**从插件市场 / npm 安装**（发布到 npm 之后）：
+
+```sh
+dsh plugin --profile desktop add dsh-material-theme@latest
+```
+
+随后在 DSH Desktop 的插件市场里也能搜到并一键安装。
+
+**从本地目录安装**（开发时）：
+
 ```sh
 ./scripts/install.sh            # 默认安装到 web profile
 ./scripts/install.sh desktop    # 桌面端 profile（当前桌面 App 使用它）

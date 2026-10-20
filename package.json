@@ -1,7 +1,6 @@
 {
   "name": "dsh-material-theme",
   "version": "0.2.3",
-  "private": true,
   "type": "module",
   "description": "Material Theme for DSH Desktop — the official Material Theme palette set (32 palettes: Oceanic, Palenight, Darker, Deep Ocean and 28 more) with the official accent table and syntax colours",
   "main": "index.js",
@@ -45,5 +44,16 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/jaychoumylove/dsh-material.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "homepage": "https://github.com/jaychoumylove/dsh-material#readme",
+  "bugs": {
+    "url": "https://github.com/jaychoumylove/dsh-material/issues"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
