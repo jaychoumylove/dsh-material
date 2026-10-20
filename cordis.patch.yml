@@ -1,0 +1,8 @@
+# DSH bundle patch for dsh-material-theme.
+#
+# Adds this package as a profile layer. The `id` must match the package name so
+# that the desktop/web profile can resolve the layer's host half (`index.js`)
+# and, through `dsh.client`, its client half (`client/client.js`).
+- insert:
+    - id: dsh-material-theme
+      name: 'dsh-material-theme'

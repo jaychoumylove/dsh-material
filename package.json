@@ -1,0 +1,49 @@
+{
+  "name": "dsh-material-theme",
+  "version": "0.2.3",
+  "private": true,
+  "type": "module",
+  "description": "Material Theme for DSH Desktop — the official Material Theme palette set (32 palettes: Oceanic, Palenight, Darker, Deep Ocean and 28 more) with the official accent table and syntax colours",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "theme",
+    "material",
+    "material-theme-ui",
+    "material-design",
+    "color-palette"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jaychoumylove/dsh-material.git"
+  }
+}
