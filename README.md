@@ -134,13 +134,21 @@ DSH 的「外观」三宫格写死为 light / dark / system，第三方主题无
 
 ## 安装
 
-**从插件市场 / npm 安装**（发布到 npm 之后）：
+**从插件市场安装**
+
+已收录进 1024Store 目录（[deepseek1024.com](https://deepseek1024.com)，分类「themes」），
+在 DSH Desktop 的插件市场里搜索 `dsh-material` 即可找到条目。
+
+```sh
+# GitHub 直装（市场条目里给出的命令，profile 按需改为 desktop）
+dsh plugin --profile desktop add github:jaychoumylove/dsh-material
+```
+
+**从 npm 安装**（包里已发布到 npm 之后）：
 
 ```sh
 dsh plugin --profile desktop add dsh-material-theme@latest
 ```
-
-随后在 DSH Desktop 的插件市场里也能搜到并一键安装。
 
 **从本地目录安装**（开发时）：
 
